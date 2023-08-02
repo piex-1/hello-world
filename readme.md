@@ -43,6 +43,7 @@
 ### 3.3.2 使用转义字符
 第一段为没有缩进的英文段落，第二段为使用转义符号缩进的英文段落。  
 be or no to be, that is a question.
+
 &emsp;&emsp;be or no to be, that is a question.  
 <!--
 一个字：全方大的空白&emsp;或&#8195;空白
@@ -52,7 +53,7 @@ be or no to be, that is a question.
 
 ### 3.3.3 使用全角空格使用中文全角空格转义字符用^_^适合于中文文章。
 　　^_^正文第一段。正文第一段,正文第一段。正文第一段。
-
+这里在vs code内显示不正确，当时GitHub上是正确的，同时
 ### 3.3.4  空白行
 在 Markdown 中，即使插入多个换行符，渲染时也会被合并成单一空行：  
 开始结束。  
@@ -94,37 +95,200 @@ be or no to be, that is a question.
 
 # 4.分割线
 ## 4.1 分割线声明 
-使用「星号」作为分割线
+使用「星号」作为分割线，（1）分界线
 
 ***
 
-使用「减号」作为分割线
+使用「减号」作为分割线（2）
 
 ---
 
-使用「下划线」作为分割线
+使用「下划线」作为分割线（3）
 ___
 ## 4.2 分割线的样式
 ### 分割线的尺寸
 
-#### 3px 宽线条
-___
-
-#### 5px 宽线条
-___
-
 #### 10px 宽线条
 ___
 
-<style>hr:nth-of-type(1) {
-  border-width: 3px 0 0 0 !important;
+#### 20px 宽线条
+___
+
+#### 50px 宽线条
+___
+
+## 4.3 分割线类型
+### 分割线的类型
+
+#### 实线分隔线
+___
+
+#### 虚线分割线
+___
+
+#### 点状分割线
+___
+
+#### 双线分割线
+___
+
+#### 凹槽分割线
+___
+
+#### Inset分割线
+___
+
+#### Outset分割线
+___
+
+<style>hr {
+  border-style: none !important;
+  border-top-width: 5px !important;
 }
-hr:nth-of-type(2) {
-  border-width: 5px 0 0 0 !important;
-}
-hr:nth-of-type(3) {
+hr:nth-of-type(4) {
   border-width: 10px 0 0 0 !important;
-}</style>
+}
+hr:nth-of-type(5) {
+  border-width: 20px 0 0 0 !important;
+}
+hr:nth-of-type(6) {
+  border-width: 50px 0 0 0 !important;
+}
+hr:nth-of-type(7) {
+  border-top-style: solid !important;
+}
+hr:nth-of-type(8) {
+  border-top-style: dashed !important;
+}
+hr:nth-of-type(9) {
+  border-top-style: dotted !important;
+}
+hr:nth-of-type(10) {
+  border-top-style: double !important;
+}
+hr:nth-of-type(11) {
+  border-top-style: groove !important;
+}
+hr:nth-of-type(12) {
+  border-top-style: ridge !important;
+}
+hr:nth-of-type(13) {
+  border-top-style: inset !important;
+  border-width: 20px 0 0 0 !important;
+}
+hr:nth-of-type(14) {
+  border-top-style: outset !important;
+}
+</style>
+## 4.4 Example(如何添加链接)
+林群  
+2019年12月19日08:13  来源：人民网－人民日报
+___
+
+
+　　什么叫科普？一次我开会乘坐出租车，司机问我：“您这么大年纪了，不在家带孙辈，还到处跑，是做什么工作的？”我说：“做数学的。”想不到他立即蹦出一句：“哦，0.618。”
+
+　　...
+
+　　所以，做科普也可以创新，和做科研一样。
+
+　　_《 人民日报 》（ 2019年12月19日 19 版）_
+
+___
+
+相关新闻:
+
+- [全国科学传播发展指数报告出炉](http://scitech.people.com.cn/n1/2019/0603/c1007-31116146.html)
+- [科学家为啥不爱做科普](http://scitech.people.com.cn/n1/2017/0307/c1007-29129143.html)
+
+# 5.列表
+Markdown 支持有序和无序两种列表，无序列表使用 「星号 "*"」、「加号 "+"」、「减号 "-"」表示，有序列表使用数字定义，如: 1. xxx 2.xxx 3.xxx 等。  
+环境说明：  
+考虑到 Markdown 工具之间的不兼容，有的内容直接从页面复制粘贴到本地不会正常显示，大家学习时自己动手写是肯定没问题的。本节所有实例代码及演示效果均使用 Typora 工具完成。
+
+## 5.1无序列表
+使用星号生成无序列表
+
+* 项目1
+* 项目2
+* 项目3
+
+使用加号生成无序列表
+
++ 项目1
++ 项目2
++ 项目3
+
+使用减号生成无序列表
+
+- 项目1
+- 项目2
+- 项目3
+
+## 5.2有序列表
+使用数字实现有序列表
+
+1. 项目1
+2. 项目2
+3. 项目3
+
+源码中的数字与渲染后的数字并不一一对应，但可以决定列表的开始序号
+
+例如，让 Markdown 渲染器自动安排序号：
+
+0. 项目1
+0. 项目2
+0. 项目3
+
+让有序列表以 “2” 开头：
+
+2. 项目1
+1. 项目2
+0. 项目3
+
+## 5.3 列表的嵌套
+### 有序列表的嵌套
+
+有序列表可以通过缩进实现嵌套
+
+1. 项目 1
+1. 项目 1-1
+1. 项目 2
+1. 项目 2-1
+1. 项目 2-2
+1. 项目 3
+
+无序列表的嵌套是没有层数限制的
+
+1. 第一层 1
+1. 第二层 1
+1. 第三层 1
+1. 第四层 1
+1. 第五层 1
+1. 第三层 2
+1. 第二层 2
+
+### 无序列表的嵌套
+
+无序列表可以通过缩进实现嵌套
+
+* 项目 1
+* 项目 1-1
+* 项目2
+* 项目 2-1
+* 项目 2-2
+* 项目3
+
+无序列表的嵌套是没有层数限制的
+
+* 第一层 1
+* 第二层 1
+* 第三层 1
+* 第四层 1
+* 第五层 1
+* 第三层 2
+* 第二层 2
+
 
 # 图片 
 ![我爱学习网](https://www.5axxw.com/static/img/index/logo.png)
