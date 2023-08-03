@@ -452,10 +452,162 @@ Markdown 使普通文本具有格式，但它的原生语法并不支持修改�
 <font face="GB18030 Bitmap">这里是扩展字体</font>
 ![](/picture/fond-size.png)
 
+## 9.3 字号
+#### 使用`<font>` 标签的修改字号
+
+这里是默认正文字号
+
+<font size="1">1号字 最小</font>
+
+<font size="2">2号字</font>
+
+<font size="3">3号字 默认</font>
+
+<font size="4">4号字</font>
+
+<font size="5">5号字</font>
+
+<font size="6">6号字</font>
+
+<font size="7">7号字 最大</font>
+
+#### 通过small和big来操作
+#### 使用`<big>` 或 `<small>` 标签的修改字号
+
+这段文字里既包含<big>放大了的文字</big>，也包含<small>缩小了的文字</small>
+#### 全局字体的调整
 
 
-# 图片 
-![我爱学习网](https://www.5axxw.com/static/img/index/logo.png)
+# 10 前景色、
+## 10.1 前景色
+#### 使用`<font>` 的标签的修改文字前景色
+
+<font color="red">红色</font>
+<font color="green">绿色</font>
+<font color="blue">蓝色</font>
+<font color="rgb(200, 100, 100)">使用 rgb 颜色值</font>
+<font color="#FF00BB">使用十六进制颜色值</font>
+<font style="color: red">红色</font>
+<font style="color: green">绿色</font>
+<font style="color: blue">蓝色</font>
+<font style="color: rgb(200,100,100)">使用 rgb 颜色值</font>
+<font style="color: #FF00BB">使用十六进制颜色值</font>
+
+## 10.2 背景色
+#### 使用`style` 的标签的修改文字前景色
+<font style="background: red">红色</font>
+<font style="background: green">绿色</font>
+<font style="background: blue">蓝色</font>
+<font style="background: rgb(200,100,100)">使用 rgb 颜色值</font>
+<font style="background: #FF00BB">使用十六进制颜色值</font>
+
+# 11 行内代码
+行内代码用一对 「反引号 `」符号将需要转换的文字内容包括起来，它让我们方便地在行内编辑带有特殊字符的文字内容。Markdown 作为一种排版工具语言，其作用是为了帮助我们处理一些常见的排版问题。但是我们仍有一些场景需要保留文字的原格式，例如保留字符中间的空格数量等。Markdown 通过行内代码的形式让连续字符保持格式不变。
+
+## 11.1 
+#### 定义行内代码
+行内的 html 代码：`<head><title>网页标题</title></head>`  
+行内的 json 代码：`var json = {key: value};`
+#### 定义行内代码开头或结束包含反引号
+行内代码的定义是由反引号开始的，形如:`` `"hello, ${}"` ``
+
+## 11.2 Example
+开心：`(⊙ᗜ⊙)` `（‐＾▽＾‐）` ` ٩(๑òωó๑)۶` `ヾ（≧?≦）〃` `o(>ω<)o` `(￣▽￣)ノ`
+
+伤心：`(；´д｀)ゞ` `(；д；)` `(；へ：)` `(╥╯╰╥)` `╮(╯﹏╰）╭` `╭(╯╰)╮` `(╯︵╰)`
+
+ 惊讶：`ɖී؀ීϸ` ` (」゜ロ゜)」` `` (´⊙ω⊙`)！``  ` щ(゜ロ゜щ)`  ` ༼∩•́ω•̀∩༽` `໒( ◑ w ◑ )७` `ԅ༼ . º ʖ̯ º . ༽ง` `(⊹◕ʖ̯◕)、`
+
+# 12 代码块
+  Markdown 作为一种排版工具语言，其作用是为了帮助我们处理一些常见的排版问题。但是我们仍有一些场景需要保留文字的原格式，例如不同的缩进、中间空格数量等。Markdown 通过代码块的方式处理需要保存格式的多行文字内容。
+## 12.1 代码块
+#### 使用反引号定义代码块
+
+​```
+pubic static void main(String[] args) {      
+  System.out.println("Hello world");  
+}  
+​```
+#### 使用反引号定义代码块，并定义高亮
+
+​```java
+pubic static void main(String[] args) {  
+  System.out.println("Hello world");  
+}
+​```
+## 12.2  Example
+#### 一张字符画
+
+​```
+.__           .__  .__                               .__       .___
+|  |__   ____ |  | |  |   ____   __  _  _____________|  |    __| _/
+|  |  \_/ __ \|  | |  |  /  _ \  \ \/ \/ /  _ \_  __ \  |   / __ |
+|   Y  \  ___/|  |_|  |_(  <_> )  \     (  <_> )  | \/  |__/ /_/ |
+|___|  /\___  >____/____/\____/    \/\_/ \____/|__|  |____/\____ |
+\/     \/                                                  \/
+​```
+
+# 13.超链接
+Markdown 支持两种超链接的定义方式：行内定义和全局声明。不管哪种方式，其都是由 「中括号 []」来声明。
+如果需要创建行内链接的创建方式，用一对紧跟「中括号 []」的「小括号 ()」描述目标链接，小括号内不仅可以包含链接的地址，也可以用「引号 ""」设定链接的标题。
+## 13.1 超链接的基本定义
+#### 声明超链接
+
+一对中括号就可以将文字转换为超链接，如: [北京]()，[上海]()，[广州]()，[深圳]()
+#### 声明超链接的细节
+
+点击下面的连接将跳转到[Github](https://www.github.com/ '')
+#### 声明超链接的细节
+
+[天坛][tiantan]公园，是明清两代皇帝每年祭天和祈祷五谷丰收的地方。[天坛][tiantan]以严谨的建筑布局、奇特的建筑构造和瑰丽的建筑装饰著称于世。
+
+[tiantan]: http://www.tiantanpark.com
+#### 声明超链接的细节
+
+[天坛][]公园，是明清两代皇帝每年祭天和祈祷五谷丰收的地方。[天坛][]以严谨的建筑布局、奇特的建筑构造和瑰丽的建筑装饰著称于世。
+
+[天坛]: http://www.tiantanpark.com
+
+# 14.图片 
+## 14.1 ## 插入一张图片
+图片前的文字。
+
+![](./picture/dog.png)
+## 14.2 example
+
+<img src="./picture/dog.png" style = "border-radius: 50% !important; border: 30px solid #eee;">
+## error Example 
+
+<p style = "border-radius: 50% !important; border: 30px solid #eee;">
+<img src="./picture/dog.png" >
+</p>
+图片后的文字
+
+# 15.任务列表
+## 15.1 任务
+#### 复选框 checkbox
+
+- [ ] Java
+- [x] Php
+#### 复选框 checkbox
+
++ [ ] Java
++ [x] Php
+## 15.2 Example
+#### 学生管理系统（三）
+
+- [ ] **数据库设计**  
+  责任人：小丙  
+  任务描述：搭建 Mysql 数据库环境；设计数据表；数据库设计满足三范式。  
+  预计完成时间 5 天
+  - [ ] 搭建数据库环境
+  - [ ] 整理数据表名、主要字段
+  - [ ] 设计 E-R 图
+  - [ ] 使数据表符合范式要求
+  - [ ] 应用到数据库中
+  - [ ] 整理此部分文档笔记
+
+# 16 
 
 # 表格 ↓
 |姓名|分数|
