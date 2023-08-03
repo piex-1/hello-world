@@ -523,29 +523,35 @@ Markdown 使普通文本具有格式，但它的原生语法并不支持修改�
 ## 12.1 代码块
 #### 使用反引号定义代码块
 
-​```
+```python
+# 在这里写下你的代码
+import python 
 pubic static void main(String[] args) {      
   System.out.println("Hello world");  
 }  
-​```
+```
 #### 使用反引号定义代码块，并定义高亮
 
-​```java
+```java
 pubic static void main(String[] args) {  
   System.out.println("Hello world");  
 }
-​```
+```
+
+
 ## 12.2  Example
 #### 一张字符画
 
-​```
+```
 .__           .__  .__                               .__       .___
 |  |__   ____ |  | |  |   ____   __  _  _____________|  |    __| _/
 |  |  \_/ __ \|  | |  |  /  _ \  \ \/ \/ /  _ \_  __ \  |   / __ |
 |   Y  \  ___/|  |_|  |_(  <_> )  \     (  <_> )  | \/  |__/ /_/ |
 |___|  /\___  >____/____/\____/    \/\_/ \____/|__|  |____/\____ |
 \/     \/                                                  \/
-​```
+```
+
+
 
 # 13.超链接
 Markdown 支持两种超链接的定义方式：行内定义和全局声明。不管哪种方式，其都是由 「中括号 []」来声明。
@@ -636,45 +642,55 @@ Markdown 支持两种超链接的定义方式：行内定义和全局声明。�
 ## 17.2 Example
 #### 各式各样的 Hello world
 
-​```java
-// Java
-class HelloWorld {
-public static void main(String[] args) {
-System.out.println("Hello, world!");
-}
-}
-​```
+```python
+# 在这里写下你的代码
+import python 
 
-​```python
-# Python
-print("Hello, world!")
-​```
+```
 
-​```ruby
-# Ruby
-puts "Hello, world!"
-​```
 
-​```scala
-// Scala
-object HelloWorld extends App {
-println("Hello, world!")
-}
-​```
 
-​```go
-// Go
-package main
-import "fmt"
-  func main() {
-  fmt.Println("Hello, world!")
-}
-​```
+```yaml
+name: Sync from template
+on:
+    # cronjob trigger
+  schedule:
+  - cron:  "0 0 1 * *"
+  # manual trigger
+  workflow_dispatch:
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v0.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_repo_path: alshedivat/al-folio
+          upstream_branch: master
+```
 
-# 表格 ↓
+
+# 18.表格 
 |姓名|分数|
 |---|---|
 |张三|100分|
 |李四|90分|
+## 18.2 表哥对齐
+#### 表格内容的对齐
+|左对齐|居中对齐|右对齐|
+|:--|:--:|--:|
+|1|张三|17岁|
+|2|李四|18岁|
+|3|王五|19岁|
+
+# 19.一些图表
+-[流程图](https://www.5axxw.com/wiki/content/7n55e9)
+
+# 20.上下标
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 
 # html 语言
