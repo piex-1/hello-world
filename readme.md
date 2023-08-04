@@ -693,4 +693,7 @@ jobs:
 # 20.上下标
 a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 
+你的美（镁）偷走了我的<font color="red">❤</font>（锌)!!!
+
+Mg + ZnSO<sub>4</sub> == MgSO<sub>4</sub> + Zn
 # html 语言
